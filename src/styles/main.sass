@@ -1,0 +1,146 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600)
+
+$c1: #004056
+$c2: #2C858D
+$c3: #74CEB7
+$c4: #C9FFD5
+$c5: #FFFFCB
+$c6: #D8F2F0
+$entryTime: 2s
+
+@keyframes slide
+  0%
+    opacity: 1
+    height: 0
+  50%
+    height: 50%
+  100%
+    opacity: 0
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+    transform: scale(0.5)
+  100%
+    opacity: 1
+
+html
+  height: 100%
+  overflow: hidden
+
+
+html, body
+  margin: 0
+  padding: 0
+  width: 100%
+  height: 100%
+
+body
+  //background: $c6
+  background: linear-gradient($c6, darken($c6, 15%))
+  color: #333
+  font-size: 12px
+  font-family: 'Open Sans', Helvetica, sans-serif
+  display: flex
+  align-items: center
+  justify-content: center
+
+header
+  display: flex
+  box-shadow: lighten($c3, 20%) 0px 5px 3px
+
+.content
+  padding: 0 1em
+  text-align: justify
+
+
+h1
+  font-size: 2em
+  font-weight: 300
+  margin: 0
+  padding: 0
+  color: white
+  display: inline-block
+
+h2
+  font-family: monospace
+  color: $c3
+
+.backdrop
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  background: $c3
+  animation: slide $entryTime ease forwards
+  opacity: 0
+
+  &.bottom
+    bottom: 0
+    top: auto
+
+.avatar
+  width: 72px
+  height: 72px
+  margin: 0.5em
+  background-image: url(../images/avatar.png)
+  background-size: cover
+  border-radius: 50%
+  box-shadow: #666 0 5px 10px inset
+  background-position: -4960px
+  animation: gif 1s steps(17, start) 1.5s 1 forwards
+
+.info
+  display: inline-block
+  vertical-align: top
+  padding: 0.5em
+  flex: 1
+  position: relative
+
+  ul, li
+    margin-left: 0
+    font-size: 10px
+
+#wrapper
+  width: 500px
+  max-width: 85%
+  background: white
+  border: $c3 1px solid
+  box-shadow: lighten($c3, 10%) 0 0 10px
+  border-radius: 4px
+  opacity: 0
+  animation: fadeIn 0.4s ease 1s forwards
+  margin: 1em
+  z-index: 1
+
+header
+  background: $c2
+  color: white
+
+a
+  color: #333
+  transition: all .2s
+
+  &:hover
+    color: $c3
+
+ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+  footer &
+  margin: 0.5em
+
+  li
+    display: inline-block
+    margin: 3px
+    padding: 0
+
+    a, a:visited
+      text-decoration: none
+      color: lighten($c2, 30%)
+      transition: color 0.2s
+
+      &:hover, &:active
+        color: $c2

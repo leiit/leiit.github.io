@@ -1,0 +1,17 @@
+{
+  "name": "leiit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Lauri Luotola <lauri.luotola@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.3.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^2.1.1"
+  }
+}
