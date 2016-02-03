@@ -57,7 +57,12 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  box-shadow: #bfe9de 0px 5px 3px; }
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  box-shadow: #a3dde2 0px 3px 3px;
+  background: #38aab4;
+  color: white; }
 
 .content {
   padding: 0 1em;
@@ -73,7 +78,8 @@ h1 {
 
 h2 {
   font-family: monospace;
-  color: #74CEB7; }
+  color: #2C858D;
+  margin: .75em 0 0 0; }
 
 .backdrop {
   position: absolute;
@@ -96,9 +102,12 @@ h2 {
   background-size: cover;
   border-radius: 50%;
   box-shadow: #666 0 5px 10px inset;
-  background-position: -4960px;
-  -webkit-animation: gif 1s steps(17, start) 1.5s 1 forwards;
-          animation: gif 1s steps(17, start) 1.5s 1 forwards; }
+  border: rgba(255, 255, 255, 0.85) 2px solid; }
+
+@media screen and (max-width: 400px) {
+  .avatar {
+    width: 36px;
+    height: 36px; } }
 
 .info {
   display: inline-block;
@@ -113,6 +122,12 @@ h2 {
     font-size: 10px; }
 
 #wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 500px;
   max-width: 85%;
   background: white;
@@ -124,10 +139,6 @@ h2 {
           animation: fadeIn 0.4s ease 1s forwards;
   margin: 1em;
   z-index: 1; }
-
-header {
-  background: #2C858D;
-  color: white; }
 
 a {
   color: #333;
