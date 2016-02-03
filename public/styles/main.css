@@ -4,7 +4,7 @@
     opacity: 1;
     height: 0; }
   50% {
-    height: 50%; }
+    height: 50vh; }
   100% {
     opacity: 0; } }
 @keyframes slide {
@@ -12,7 +12,7 @@
     opacity: 1;
     height: 0; }
   50% {
-    height: 50%; }
+    height: 50vh; }
   100% {
     opacity: 0; } }
 
@@ -83,7 +83,7 @@ h2 {
   background: #74CEB7;
   -webkit-animation: slide 2s ease forwards;
           animation: slide 2s ease forwards;
-  opacity: 0; }
+  height: 50vh; }
   .backdrop.bottom {
     bottom: 0;
     top: auto; }
